@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    //Improved solution using a DOMContentLoaded event listener to ensure the element is available
+    document.addEventListener('DOMContentLoaded', function() {
+      var myElement = document.getElementById('myDiv');
+      if (myElement) {
+        myElement.style.display = 'none';
+      } else {
+        console.error('Element not found!');
+      }
+    });
+  </script>
+</body>
+</html>
