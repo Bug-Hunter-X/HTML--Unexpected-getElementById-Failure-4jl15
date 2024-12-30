@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Incorrect way to access element by id in certain situations
+    var myElement = document.getElementById('myDiv');
+    if (myElement) {
+      myElement.style.display = 'none';
+    } else {
+      console.error('Element not found!');
+    }
+  </script>
+</body>
+</html>
